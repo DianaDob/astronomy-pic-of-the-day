@@ -1,5 +1,8 @@
 let title = document.getElementById("title");
 let image = document.getElementById("image");
+let video = document.getElementById("video");
+video.width = 640;
+video.height = 360;
 let description = document.getElementById("description");
 
 
@@ -13,7 +16,7 @@ fetchData();
 
 function updatePageWithData(data) {
     title.textContent = data.title;
-    image.src = data.url;
+    toggleMediaType(data);
     description.textContent = data['explanation'];
 }
 
@@ -28,4 +31,17 @@ function fetchEarlierData() {
     fetch(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${date}`)
         .then(response => response.json())
         .then(data => updatePageWithData(data));
+}
+
+function toggleMediaType(data){
+    if(data.media_type === 'video'){
+        video.src = data.url;
+        video.style.display = "block";
+        image.style.display = "none";
+    }
+    else{
+        image.src = data.url;
+        video.style.display = "none";
+        image.style.display = "block";
+    }
 }

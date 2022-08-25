@@ -17,6 +17,8 @@ If any of the pictures is clicked, a modal opens that displays the title, the pi
  - Run the following Maven command to start the application:
     - ./mvnw clean spring-boot:run
 
+## Shutdown
+- To stop the application, go to the terminal where it is running and press Ctrl+C.
 
 ## References
 - The original Astronomy Picture of the Day:

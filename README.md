@@ -11,9 +11,10 @@ If any of the pictures is clicked, a modal opens that displays the title, the pi
  
 ## Prerequisites
  - [Java 17+](https://www.oracle.com/java/technologies/downloads/#java17)
+ - [Apache Maven 3.8.5 +](https://maven.apache.org/download.cgi)
  
  ## Running application using Maven
- - Open a terminal and navigate to 8_ask_nasa folder
+ - Open a terminal and navigate to the project folder
  - Run the following Maven command to start the application:
     - ./mvnw clean spring-boot:run
 
